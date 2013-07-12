@@ -1,0 +1,65 @@
+/*
+Theme Name: 	Ø
+Theme URI: 		https://github.com/monachilada/oe
+Description: 	An øpinionated Wordpress theme
+Version: 		0.1
+Author: 		Mike Pierce & Florian Stern
+Author URI: 	http://someoneandsons.net/
+Tags: 			ø, single page, typography, stylish, minimal
+*/
+@import 'compass/reset';
+@import 'compass/css3';
+@import 'compass/utilities';
+
+@import 'mixins/defaults';
+@import 'mixins/mixins';
+@import 'variables';
+@import 'grid';
+
+body {
+	background: white;
+	color: black;
+	
+	> header, > section, > footer {
+		width: 100%;
+		padding: 1.5em 0;
+		@include pie-clearfix;
+	}
+}
+
+nav {
+	&.sideways {
+		ul {
+			@include pie-clearfix;
+			
+			li {
+				float: left;
+				
+				a {
+					padding: 1.5em;
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+
+.float-right {
+	float:right;
+}
+
+.float-left {
+	float:right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}

@@ -1,0 +1,3 @@
+[submodule "scss/mixins"]
+	path = scss/mixins
+	url = https://github.com/monachilada/_mixins.scss.git

@@ -1,0 +1,127 @@
+/*
+Theme Name: 	Ø
+Theme URI: 		https://github.com/monachilada/oe
+Description: 	An øpinionated Wordpress theme
+Version: 		0.1
+Author: 		Mike Pierce & Florian Stern
+Author URI: 	http://someoneandsons.net/
+Tags: 			ø, single page, typography, stylish, minimal
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+html { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+html { font-size: 62.5%; width: 100%; height: 100%; }
+
+.container { max-width: 1140px; margin: 0 auto; }
+.container .row, .container .col, .container .clearfix { *zoom: 1; }
+.container .row:after, .container .col:after, .container .clearfix:after { content: ""; display: table; clear: both; }
+.container .row + .row { margin-top: 3em; }
+.container .col { display: block; float: left; width: 100%; }
+.container .col img { max-width: 100%; height: auto; }
+@media (min-width: 768px) { .container .col { margin-left: 2%; } }
+.container .col:first-child { margin-left: 0; }
+@media (min-width: 768px) { .container .span1 { width: 2.25%; }
+  .container .span2 { width: 6.5%; }
+  .container .span3 { width: 10.75%; }
+  .container .span4 { width: 15.0%; }
+  .container .span5 { width: 19.25%; }
+  .container .span6 { width: 23.5%; }
+  .container .span7 { width: 27.75%; }
+  .container .span8 { width: 32.0%; }
+  .container .span9 { width: 36.25%; }
+  .container .span10 { width: 40.5%; }
+  .container .span11 { width: 44.75%; }
+  .container .span12 { width: 49.0%; }
+  .container .span13 { width: 53.25%; }
+  .container .span14 { width: 57.5%; }
+  .container .span15 { width: 61.75%; }
+  .container .span16 { width: 66.0%; }
+  .container .span17 { width: 70.25%; }
+  .container .span18 { width: 74.5%; }
+  .container .span19 { width: 78.75%; }
+  .container .span20 { width: 83.0%; }
+  .container .span21 { width: 87.25%; }
+  .container .span22 { width: 91.5%; }
+  .container .span23 { width: 95.75%; }
+  .container .span24 { width: 100%; }
+  .container .push1 { margin-left: 6.25%; }
+  .container .push2 { margin-left: 10.5%; }
+  .container .push3 { margin-left: 14.75%; }
+  .container .push4 { margin-left: 19.0%; }
+  .container .push5 { margin-left: 23.25%; }
+  .container .push6 { margin-left: 27.5%; }
+  .container .push7 { margin-left: 31.75%; }
+  .container .push8 { margin-left: 32.0%; }
+  .container .push9 { margin-left: 36.25%; }
+  .container .push10 { margin-left: 44.5%; }
+  .container .push11 { margin-left: 48.75%; }
+  .container .push12 { margin-left: 53.0%; }
+  .container .push13 { margin-left: 57.25%; }
+  .container .push14 { margin-left: 61.5%; }
+  .container .push15 { margin-left: 65.75%; }
+  .container .push16 { margin-left: 70.0%; }
+  .container .push17 { margin-left: 74.25%; }
+  .container .push18 { margin-left: 78.5%; }
+  .container .push19 { margin-left: 82.75%; }
+  .container .push20 { margin-left: 87.0%; }
+  .container .push21 { margin-left: 91.25%; }
+  .container .push22 { margin-left: 95.5%; }
+  .container .push23 { margin-left: 99.75%; }
+  .container .push1:first-child { margin-left: 4.25%; }
+  .container .push2:first-child { margin-left: 8.5%; }
+  .container .push3:first-child { margin-left: 12.75%; }
+  .container .push4:first-child { margin-left: 17.0%; }
+  .container .push5:first-child { margin-left: 21.25%; }
+  .container .push6:first-child { margin-left: 25.5%; }
+  .container .push7:first-child { margin-left: 29.75%; }
+  .container .push8:first-child { margin-left: 34.0%; }
+  .container .push9:first-child { margin-left: 38.25%; }
+  .container .push10:first-child { margin-left: 42.5%; }
+  .container .push11:first-child { margin-left: 46.75%; }
+  .container .push12:first-child { margin-left: 51.0%; }
+  .container .push13:first-child { margin-left: 55.25%; }
+  .container .push14:first-child { margin-left: 59.5%; }
+  .container .push15:first-child { margin-left: 63.75%; }
+  .container .push16:first-child { margin-left: 68.0%; }
+  .container .push17:first-child { margin-left: 72.25%; }
+  .container .push18:first-child { margin-left: 76.5%; }
+  .container .push19:first-child { margin-left: 80.75%; }
+  .container .push20:first-child { margin-left: 85.0%; }
+  .container .push21:first-child { margin-left: 89.25%; }
+  .container .push22:first-child { margin-left: 93.5%; }
+  .container .push23:first-child { margin-left: 97.75%; } }
+
+body { background: white; color: black; }
+body > header, body > section, body > footer { width: 100%; padding: 1.5em 0; *zoom: 1; }
+body > header:after, body > section:after, body > footer:after { content: ""; display: table; clear: both; }
+
+nav.sideways ul { *zoom: 1; }
+nav.sideways ul:after { content: ""; display: table; clear: both; }
+nav.sideways ul li { float: left; }
+nav.sideways ul li a { padding: 1.5em; display: inline-block; }
+
+.float-right { float: right; }
+
+.float-left { float: right; }
+
+.text-center { text-align: center; }
+
+.text-left { text-align: left; }
+
+.text-right { text-align: right; }
