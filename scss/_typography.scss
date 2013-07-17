@@ -1,0 +1,71 @@
+h1 {
+	font-family: 'Merriweather', Helvetica, Arial, sans-serif;
+	font-weight: 900;
+	font-size: 59px;
+	font-size: (59 / $rem-units)+rem;
+	line-height: 1.1;
+	margin-bottom: $font-base+px;
+	margin-bottom: ($font-base / $rem-units)+rem;
+}
+
+h2 {
+	font-size: 37px;
+	font-size: (37 / $rem-units)+rem;
+	line-height: 1.2;
+	margin-bottom: $font-base+px;
+	margin-bottom: ($font-base / $rem-units)+rem;
+	font-weight: bold;
+}
+
+h3, .feature {
+	font-size: 23px;
+	font-size: (23 / $rem-units)+rem;
+	line-height: 1.3;
+	margin-bottom: $font-base+px;
+	margin-bottom: ($font-base / $rem-units)+rem;
+}
+
+h4, .lede {
+	font-size: 18px;
+	font-size: (18 / $rem-units)+rem;
+	line-height: 1.4;
+	margin-bottom: $font-base+px;
+	margin-bottom: ($font-base / $rem-units)+rem;
+}
+
+h5, h6, p {
+	margin-bottom: $font-base+px;
+	margin-bottom: ($font-base / $rem-units)+rem;
+}
+
+small {
+	
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: bold;
+}
+
+.float-right {
+	float:right !important;
+}
+
+.float-left {
+	float:right !important;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+.text-right {
+	text-align: right !important;
+}

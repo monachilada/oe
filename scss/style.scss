@@ -13,53 +13,75 @@ Tags: 			ø, single page, typography, stylish, minimal
 
 @import 'mixins/defaults';
 @import 'mixins/mixins';
+@import 'fonts';
 @import 'variables';
+@import 'typography';
 @import 'grid';
 
 body {
 	background: white;
 	color: black;
+	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+	font-size: $font-base+px;
+	font-size: ($font-base / $rem-units)+rem;
+	line-height: ($line-height / $font-base);
 	
 	> header, > section, > footer {
-		width: 100%;
-		padding: 1.5em 0;
+		width: 100%;		
 		@include pie-clearfix;
 	}
-}
-
-nav {
-	&.sideways {
-		ul {
-			@include pie-clearfix;
+	
+	> header {
+		h1 {
+			margin: 0;			
+			font-size: 23px;
+			font-size: (23 / $rem-units)+rem;
+			line-height: (59/23);
 			
-			li {
-				float: left;
-				
-				a {
-					padding: 1.5em;
-					display: inline-block;
+			img {
+				display: inline-block;				
+				vertical-align: middle;
+			}
+		}
+		
+		nav {
+			ul {
+				@include pie-clearfix;
+			
+				li {
+					float: left;
+					text-transform: uppercase;					
+					
+					a {
+						padding: 10px;
+						padding: 1rem;
+						height: 59px;
+						height: (59/$rem-units)+rem;
+						line-height: (39/$font-base);
+						color: $text-light;
+						text-decoration: none;
+						display: inline-block;
+						vertical-align: middle;
+						
+						&:hover {
+							text-decoration: underline;
+						}
+					}
 				}
 			}
 		}
 	}
+	
+	> section {	
+		padding: 3em 0;
+		min-height: 10em;
+	}
 }
 
-.float-right {
-	float:right;
+.light {
+	color: $text-dark;
 }
 
-.float-left {
-	float:right;
-}
-
-.text-center {
-	text-align: center;
-}
-
-.text-left {
-	text-align: left;
-}
-
-.text-right {
-	text-align: right;
+.dark {
+	color: $text-light;
 }

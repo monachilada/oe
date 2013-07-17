@@ -3,6 +3,7 @@
 	if(function_exists('add_theme_support')) {
 		add_theme_support('custom-header', array('admin-preview-callback' => 'oe_header_preview'));
 		add_theme_support('post-thumbnails');
+		add_theme_support('custom-background');
 	}
 	
 	function oe_header_preview() {

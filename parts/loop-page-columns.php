@@ -1,19 +1,31 @@
-<div class="page container">
-	<div class="row">
-		<?php if(has_post_thumbnail()): ?>
-			<?php the_post_thumbnail('large'); ?>
-		<?php endif; ?>
-		<h2><?php the_title(); ?></h2>
-		<?php the_content(); ?>
-	</div>	
+<div id="page-<? the_ID() ?>" class="page container">
+	<?php if(has_post_thumbnail() || !get_field('hide_title') || get_the_content() !== ''): ?>
+		<div class="row">
+			<div class="col span12 push6 text-center">
+				<?php if(has_post_thumbnail()): ?>
+					<?php the_post_thumbnail('large'); ?>
+				<?php endif; ?>
+				<?php if(!get_field('hide_title')): ?>
+					<h2><?php the_title(); ?></h2>
+				<?php endif; ?>
+				<?php if(get_the_content() != ''): ?>
+					<div class="lede">
+						<?php the_content(); ?>
+					</div>
+				<? endif; ?>
+			</div>
+		</div>
+	<?php endif; ?>
 	<?php $temp_post = $post; $subpages = get_posts(array('post_type' => 'page', 'post_parent' => get_the_ID(), 'orderby' => 'menu_order', 'order' => 'ASC')); ?>
 	<?php if(count($subpages) > 0): ?>
 		<div class="row">
-			<?php foreach($subpages as $post): setup_postdata($post); ?>
-				<? $template = str_replace('.php', '', get_post_meta(get_the_ID(), '_wp_page_template', true)); ?>
-				<? if($template == 'default' || $template == 'page-columns') $template = 'page'; ?>
-				<div class="col span<?= floor(24/count($subpages)) ?><? if(true): // Push columns if they don't ad up to 24 ?><? endif; ?>">
-					<?php get_template_part('parts/loop', $template); ?>
+			<?php $max_columns = 24; $columns = 0; foreach($subpages as $post): setup_postdata($post); ?>
+				<? $columns += get_field('column_width') + get_field('column_push'); if($columns > $max_columns): ?>
+		</div>
+		<div class="row">
+				<? $columns = get_field('column_width') + get_field('column_push'); endif; ?>
+				<div class="col text-center span<? the_field('column_width') ?><? if(get_field('column_push')): ?> push<? the_field('column_push') ?><? endif; ?>">
+					<?php get_template_part('parts/loop', 'column'); ?>
 				</div>
 			<?php endforeach; $post = $temp_post; ?>
 		</div>
