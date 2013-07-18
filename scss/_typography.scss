@@ -14,7 +14,7 @@ h2 {
 	line-height: 1.2;
 	margin-bottom: $font-base+px;
 	margin-bottom: ($font-base / $rem-units)+rem;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 h3, .feature {
@@ -50,15 +50,7 @@ strong {
 	font-weight: bold;
 }
 
-.float-right {
-	float:right !important;
-}
-
-.float-left {
-	float:right !important;
-}
-
-.text-center {
+.text-center, .aligncenter {
 	text-align: center !important;
 }
 

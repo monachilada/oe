@@ -18,16 +18,19 @@
 	<?php endif; ?>
 	<?php $temp_post = $post; $subpages = get_posts(array('post_type' => 'page', 'post_parent' => get_the_ID(), 'orderby' => 'menu_order', 'order' => 'ASC')); ?>
 	<?php if(count($subpages) > 0): ?>
-		<div class="row">
-			<?php $max_columns = 24; $columns = 0; foreach($subpages as $post): setup_postdata($post); ?>
-				<? $columns += get_field('column_width') + get_field('column_push'); if($columns > $max_columns): ?>
-		</div>
-		<div class="row">
-				<? $columns = get_field('column_width') + get_field('column_push'); endif; ?>
-				<div class="col span<? the_field('column_width') ?><? if(get_field('column_push')): ?> push<? the_field('column_push') ?><? endif; ?>">
-					<?php get_template_part('parts/loop', 'column'); ?>
+		<div class="row carousels">
+			<?php $carousels = 0; foreach($subpages as $post): setup_postdata($post); ?>
+				<div class="carousel col span14 push5 first-child" data-carousel="<?= $carousels ?>">
+					<?php get_template_part('parts/loop', 'carousel'); ?>
 				</div>
-			<?php endforeach; $post = $temp_post; ?>
+			<?php $carousels++; endforeach; $post = $temp_post; ?>
 		</div>
+		<nav class="row carousels-nav">
+			<ul class="col span14 push5">
+				<? for($c = 0; $c < $carousels; $c++): ?>
+					<li><a href="#" data-carousel="<?= $c ?>"><?= $c ?></a></li>
+				<? endfor; ?>
+			</ul>
+		</nav>
 	<?php endif; ?>
 </div>

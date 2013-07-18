@@ -1,11 +1,11 @@
-<div id="comments">
+<div id="comments" class="row">
 	<?php if(post_password_required()): ?>
 		<p><? _e('This post is password protected. Enter the password to view any comments.') ?></p>
 		</div>
 		<?php return; ?>
 	<? endif; ?>
 	<?php if(have_comments()): ?>
-		<h2><?php comments_number(); ?></h2>
+		<h3 class="text-center"><?php comments_number(); ?></h3>
 		<ol>
 			<?php wp_list_comments(array('callback' => 'oe_comment', 'end-callback' => 'oe_end_comment')); ?>
 		</ol>
