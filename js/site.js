@@ -2,8 +2,7 @@ jQuery(document).ready(function($) {
 	$('body.home a').each(function() {
 		var $this = $(this),
 		$base = $('body').data('baseurl'),
-		$url = $this.attr('href').replace($base, '');
-		$url = $url.replace(/\//gi, '');
+		$url = $this.attr('href').replace($base, '').replace(/\//gi, '');
 		
 		if($url != '#') {
 			if($url == '') {
