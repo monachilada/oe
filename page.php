@@ -1,8 +1,3 @@
-<?php get_header(); ?>
-	<?php get_template_part('parts/background'); ?>
-	<section id="<?= $post->post_name ?>" class="<? the_field('color_scheme') ?>">
-		<?php if(have_posts()) while(have_posts()): the_post(); ?>
-			<?php get_template_part('parts/loop', 'page'); ?>
-		<?php endwhile; ?>
-	</section>
-<?php get_footer(); ?>
+<?
+wp_redirect(home_url().'#'.$post->post_name);
+?>
