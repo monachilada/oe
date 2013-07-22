@@ -1,4 +1,6 @@
 <?php
+	include_once('inc/acf-fields.php');
+	
 	/* Turn on a few nice features */
 	if(function_exists('add_theme_support')) {
 		add_theme_support('custom-header', array('admin-preview-callback' => 'oe_header_preview'));
