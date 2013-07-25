@@ -6,9 +6,7 @@ jQuery(document).ready(function($) {
 		$url = $this.attr('href').replace($base, $home+'#');
 				
 		if($url !== '' && $url !== '#' && $url.indexOf('#') >= 0) {
-			if($url.substr(-1) == '/') {
-		    	$url = $url.substr(0, $url.length - 1);
-		    }
+			$url = $url.replace(/\/$/, "");
 			$this.attr('href', $url);
 		}
 	});
