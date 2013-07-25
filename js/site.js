@@ -1,19 +1,15 @@
 jQuery(document).ready(function($) {
-	$('body.home a').each(function() {
+	$('body header:first nav a').each(function() {
 		var $this = $(this),
 		$base = $('body').data('baseurl'),
-		$url = $this.attr('href').replace($base, '').replace(/\//gi, '');
-		
-		if($url != '#') {
-			if($url == '') {
-				$url = $('body > section:first').attr('id');
-			}
-			
-			var $target = $('#'+$url);
-			
-			if($target.size() > 0) {
-				$this.attr('href', '#'+$url);
-			}
+		$home = $('body').data('homeurl'),
+		$url = $this.attr('href').replace($base, $home+'#');
+				
+		if($url !== '' && $url !== '#' && $url.indexOf('#') >= 0) {
+			if($url.substr(-1) == '/') {
+		    	$url = $url.substr(0, $url.length - 1);
+		    }
+			$this.attr('href', $url);
 		}
 	});
 	

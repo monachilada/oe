@@ -16,7 +16,7 @@
 			</div>
 		</div>
 	<?php endif; ?>
-	<?php $temp_post = $post; $subpages = get_posts(array('post_type' => 'page', 'post_parent' => get_the_ID(), 'orderby' => 'menu_order', 'order' => 'ASC')); ?>
+	<?php $temp_post = $post; $subpages = get_pages(array('parent' => get_the_ID(), 'hierarchical' => 0, 'sort_column' => 'menu_order', 'sort_order' => 'ASC')); ?>
 	<?php if(count($subpages) > 0): ?>
 		<div class="row carousels">
 			<?php $carousels = 0; foreach($subpages as $post): setup_postdata($post); ?>

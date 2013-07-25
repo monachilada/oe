@@ -2,6 +2,5 @@
 /*
 Template name: Carousel
 */
-
-wp_redirect(home_url().'#'.$post->post_name);
 ?>
+<?php get_template_part('page'); ?>

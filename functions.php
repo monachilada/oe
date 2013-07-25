@@ -65,6 +65,15 @@
 		echo get_template_part('parts/comment', 'end');
 	}
 	
+	function get_post_name($id) {
+		$name = get_post($id);
+		return $name->post_name;
+	}
+	
+	function get_template_name($id) {
+		return str_replace('.php', '', get_post_meta($id, '_wp_page_template', true));
+	}
+	
 	/* Used for dumping variables. Can and should be removed in production. */
 	function debug() {
 		$args = func_get_args();
