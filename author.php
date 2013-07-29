@@ -1,13 +1,39 @@
 <?php get_header(); ?>
-	<?php if ( have_posts() ): the_post(); ?>
-		<h2>Author Archives: <?php echo get_the_author() ; ?></h2>
-		<?php if ( get_the_author_meta( 'description' ) ) : ?>
-			<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
-			<h3>About <?php echo get_the_author() ; ?></h3>
-			<?php the_author_meta( 'description' ); ?>
-		<?php endif; ?>
-		<?php get_template_part('parts/loop'); ?>
-	<?php else: ?>
-		<h2>No posts to display for <?php echo get_the_author() ; ?></h2>	
-	<?php endif; ?>
+	<?php $post = get_post(get_option('page_for_posts')); setup_postdata($post); ?>
+	<?php get_template_part('parts/background'); ?>
+	<section id="<?= $post->post_name ?>" class="blog <? the_field('color_scheme') ?>">
+		<div class="container">
+			<div class="row">
+				<div class="col span12 push6">
+					<?php if(has_post_thumbnail()): ?>
+						<?php the_post_thumbnail('large'); ?>
+					<?php endif; ?>
+					<h2 class="text-center">Author Archives: <?php echo get_the_author() ; ?></h2>
+					<?php if(get_the_content() != ''): ?>
+						<div class="lede">
+							<?php the_content(); ?>
+						</div>
+					<? endif; ?>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col span14 push2">
+					<?php if(have_posts()): ?>						
+						<?php while(have_posts()): the_post(); ?>
+							<?php get_template_part('parts/loop', 'post'); ?>
+						<?php endwhile; ?>
+					<?php else: ?>
+						<div class="row">
+							<div class="col span24">
+								<h2 class="text-center"><?php _e('No posts to display'); ?></h2>
+							</div>
+						</div>
+					<?php endif; ?>
+				</div>
+				<div class="col span5 push1 widgets">
+					<? get_sidebar(); ?>
+				</div>
+			</div>
+		</div>
+	</section>
 <?php get_footer(); ?>
