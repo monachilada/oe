@@ -25,7 +25,7 @@ h3, .feature {
 	margin-bottom: ($font-base / $rem-units)+rem;
 }
 
-h4, .lede {
+h4, blockquote, .lede {
 	font-size: 18px;
 	font-size: (18 / $rem-units)+rem;
 	line-height: 1.4;
@@ -48,6 +48,30 @@ em {
 
 strong {
 	font-weight: bold;
+}
+
+blockquote {
+	font-weight: bold;
+	font-style: italic;
+	padding: 0 3em;
+	position: relative;
+	
+	&:before, &:after {
+		content: '“';
+		position: absolute;
+		font-size: 5em;
+		line-height: 0.4;
+		left: 0;
+		top: 0;
+	}
+	
+	&:after {
+		content: '”';
+		left: auto;
+		top: auto;
+		right: 0;
+		bottom: -0.35em;
+	}
 }
 
 .text-center, .aligncenter {
