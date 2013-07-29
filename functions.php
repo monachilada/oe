@@ -74,6 +74,10 @@
 		return str_replace('.php', '', get_post_meta($id, '_wp_page_template', true));
 	}
 	
+	function get_template_file($name) {
+		return 'page-'.$name.'.php';
+	}
+	
 	/* Used for dumping variables. Can and should be removed in production. */
 	function debug() {
 		$args = func_get_args();

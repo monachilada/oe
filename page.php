@@ -12,10 +12,12 @@
 			<?php foreach($pages as $post): setup_postdata($post); ?>
 				<? $template = get_template_name(get_the_ID()); ?>
 				<? if($template == 'default') $template = 'page'; ?>
-				<?php get_template_part('parts/background'); ?>
-				<section id="<?= $post->post_name ?>" class="<? the_field('color_scheme') ?>">
-					<?php get_template_part('parts/loop', $template); ?>
-				</section>
+				<? if(!in_array($template, array('page-column', 'page-carousel'))): ?>
+					<?php get_template_part('parts/background'); ?>
+					<section id="<?= $post->post_name ?>" class="<? the_field('color_scheme') ?>">
+						<?php get_template_part('parts/loop', $template); ?>
+					</section>
+				<? endif; ?>
 			<?php endforeach; wp_reset_postdata(); ?>
 		<?php endif; ?>
 	<?php endif; ?>
