@@ -33,13 +33,16 @@ h4, blockquote, .lede {
 	margin-bottom: ($font-base / $rem-units)+rem;
 }
 
-h5, h6, p {
+h5, p {
 	margin-bottom: $font-base+px;
 	margin-bottom: ($font-base / $rem-units)+rem;
 }
 
-small {
-	
+h6, small {
+	font-size: 13px;
+	font-size: (13 / $rem-units)+rem;
+	margin-bottom: $font-base+px;
+	margin-bottom: ($font-base / $rem-units)+rem;
 }
 
 em {

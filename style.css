@@ -37,7 +37,9 @@ h3, .feature { font-size: 23px; font-size: 2.3rem; line-height: 1.3; margin-bott
 
 h4, blockquote, .lede { font-size: 18px; font-size: 1.8rem; line-height: 1.4; margin-bottom: 16px; margin-bottom: 1.6rem; }
 
-h5, h6, p { margin-bottom: 16px; margin-bottom: 1.6rem; }
+h5, p { margin-bottom: 16px; margin-bottom: 1.6rem; }
+
+h6, small { font-size: 13px; font-size: 1.3rem; margin-bottom: 16px; margin-bottom: 1.6rem; }
 
 em { font-style: italic; }
 
@@ -163,6 +165,10 @@ form input:-ms-input-placeholder { font-style: italic; font-weight: 400; }
 form input[type="submit"] { border: none; color: #fcfcfc; background: #5fc2ae; cursor: pointer; -webkit-border-radius: 1em; -moz-border-radius: 1em; -ms-border-radius: 1em; -o-border-radius: 1em; border-radius: 1em; }
 form input[type="submit"]:hover { background: #7fcebe; }
 
+.spacer-right { margin-right: 2em; }
+
+.spacer-top { margin-top: 2em; }
+
 .float-right, .alignright { float: right !important; }
 
 .float-left, .alignleft { float: left !important; }
@@ -173,10 +179,15 @@ form input[type="submit"]:hover { background: #7fcebe; }
 
 .widgets .widget { margin-bottom: 3em; }
 
-.meta time, .meta a { display: block; text-align: center; line-height: 1.1; color: #fcfcfc; padding: 0.5em 0; }
-.meta time span, .meta a span { font-size: 2em; display: block; font-weight: bold; }
-.meta time { background: #3e3846; }
-.meta a { background: #5fc2ae; text-decoration: none; }
+.blog h2 { margin-bottom: 0; }
+.blog h2 a { text-decoration: none; color: #3e3846; }
+.blog h2 a:hover { color: #645f6b; }
+.blog h2 a.active { color: #25212a; }
+.blog .meta time, .blog .meta a { display: block; text-align: center; line-height: 1.1; color: #fcfcfc; padding: 0.5em 0; }
+.blog .meta time span, .blog .meta a span { font-size: 2em; display: block; font-weight: bold; }
+.blog .meta time { background: #3e3846; }
+.blog .meta a { background: #5fc2ae; text-decoration: none; }
+.blog .post-date { font-size: 13px; font-size: 1.3rem; display: block; }
 
 #comments label { display: block; font-weight: bold; }
 #comments .form-allowed-tags { font-style: italic; }

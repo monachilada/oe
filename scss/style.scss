@@ -148,6 +148,14 @@ form {
 	}
 }
 
+.spacer-right {
+	margin-right: 2em;
+}
+
+.spacer-top {
+	margin-top: 2em;
+}
+
 .float-right, .alignright {
 	float:right !important;
 }
@@ -170,28 +178,55 @@ form {
 	}
 }
 
-.meta {
-	time, a {
-		display: block;
-		text-align: center;
-		line-height: 1.1;		
-		color: $text-light;
-		padding: 0.5em 0;
+
+
+.blog {
+	h2 {
+		margin-bottom: 0;
 		
-		span {
-			font-size: 2em;
-			display: block;
-			font-weight: bold;		
+		a {
+			text-decoration: none;
+			color: $text-dark;
+			
+			&:hover {
+				color: tint($text-dark, 20%);
+			}
+			
+			&.active {
+				color: shade($text-dark, 40%);
+			}
 		}
 	}
 	
-	time {
-		background: $text-dark;			
+	.meta {
+		time, a {
+			display: block;
+			text-align: center;
+			line-height: 1.1;		
+			color: $text-light;
+			padding: 0.5em 0;
+			
+			span {
+				font-size: 2em;
+				display: block;
+				font-weight: bold;		
+			}
+		}
+		
+		time {
+			background: $text-dark;			
+		}
+		
+		a {
+			background: $text-background;
+			text-decoration: none;
+		}
 	}
 	
-	a {
-		background: $text-background;
-		text-decoration: none;
+	.post-date {
+		font-size: 13px;
+		font-size: (13 / $rem-units)+rem;
+		display: block;
 	}
 }
 
