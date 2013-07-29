@@ -127,11 +127,16 @@ form {
 		font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif !important;
 		font-size: $font-base+px;
 		font-size: ($font-base / $rem-units)+rem;
-		font-weight: 700;
+		font-weight: 700;		
 		
 		@include placeholder {
 			font-style: italic;
 			font-weight: 400;
+		}
+		
+		&[type="text"], &[type="tel"], &[type="email"] {
+			width: 10em;
+			margin-right: 0.2em;
 		}
 		
 		&[type="submit"] {
@@ -214,7 +219,7 @@ form {
 		}
 		
 		time {
-			background: $text-dark;			
+			background: $text-dark;
 		}
 		
 		a {

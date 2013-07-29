@@ -162,6 +162,7 @@ form input::-webkit-input-placeholder { font-style: italic; font-weight: 400; }
 form input:-moz-placeholder { font-style: italic; font-weight: 400; }
 form input::-moz-placeholder { font-style: italic; font-weight: 400; }
 form input:-ms-input-placeholder { font-style: italic; font-weight: 400; }
+form input[type="text"], form input[type="tel"], form input[type="email"] { width: 10em; margin-right: 0.2em; }
 form input[type="submit"] { border: none; color: #fcfcfc; background: #5fc2ae; cursor: pointer; -webkit-border-radius: 1em; -moz-border-radius: 1em; -ms-border-radius: 1em; -o-border-radius: 1em; border-radius: 1em; }
 form input[type="submit"]:hover { background: #7fcebe; }
 
