@@ -163,8 +163,6 @@ form input:-moz-placeholder { font-style: italic; font-weight: 400; }
 form input::-moz-placeholder { font-style: italic; font-weight: 400; }
 form input:-ms-input-placeholder { font-style: italic; font-weight: 400; }
 form input[type="text"], form input[type="tel"], form input[type="email"] { width: 10em; margin-right: 0.2em; }
-form input[type="submit"] { border: none; color: #fcfcfc; background: #5fc2ae; cursor: pointer; -webkit-border-radius: 1em; -moz-border-radius: 1em; -ms-border-radius: 1em; -o-border-radius: 1em; border-radius: 1em; }
-form input[type="submit"]:hover { background: #7fcebe; }
 
 .spacer-right { margin-right: 2em; }
 
@@ -179,6 +177,9 @@ form input[type="submit"]:hover { background: #7fcebe; }
 .dark { color: #fcfcfc; }
 
 .widgets .widget { margin-bottom: 3em; }
+
+.button { border: none; color: #fcfcfc; background: #5fc2ae; cursor: pointer; -webkit-border-radius: 1em; -moz-border-radius: 1em; -ms-border-radius: 1em; -o-border-radius: 1em; border-radius: 1em; }
+.button:hover { background: #7fcebe; }
 
 .blog h2 { margin-bottom: 0; }
 .blog h2 a { text-decoration: none; color: #3e3846; }

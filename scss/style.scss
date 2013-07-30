@@ -138,18 +138,6 @@ form {
 			width: 10em;
 			margin-right: 0.2em;
 		}
-		
-		&[type="submit"] {
-			border: none;
-			color: $text-light;
-			background: $text-background;
-			cursor: pointer;			
-			@include border-radius(1em);
-			
-			&:hover {
-				background: tint($text-background, 20%);
-			}
-		}
 	}
 }
 
@@ -183,7 +171,17 @@ form {
 	}
 }
 
-
+.button {
+	border: none;
+	color: $text-light;
+	background: $text-background;
+	cursor: pointer;
+	@include border-radius(1em);
+	
+	&:hover {
+		background: tint($text-background, 20%);
+	}
+}
 
 .blog {
 	h2 {
