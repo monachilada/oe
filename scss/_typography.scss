@@ -45,6 +45,14 @@ h6, small {
 	margin-bottom: ($font-base / $rem-units)+rem;
 }
 
+ul, ol {
+	padding-left: 2em;
+}
+
+ul {
+	list-style: disc;
+}
+
 em {
 	font-style: italic;
 }

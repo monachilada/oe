@@ -65,6 +65,8 @@ body {
 		
 		nav {
 			ul {
+				list-style: none;
+				padding: 0;
 				@include pie-clearfix;
 			
 				li {

@@ -41,6 +41,10 @@ h5, p { margin-bottom: 16px; margin-bottom: 1.6rem; }
 
 h6, small { font-size: 13px; font-size: 1.3rem; margin-bottom: 16px; margin-bottom: 1.6rem; }
 
+ul, ol { padding-left: 2em; }
+
+ul { list-style: disc; }
+
 em { font-style: italic; }
 
 strong { font-weight: bold; }
@@ -142,7 +146,7 @@ body > header h1 { margin: 0; font-size: 23px; font-size: 2.3rem; line-height: 2
 body > header h1 a { color: #fcfcfc; text-decoration: none; }
 body > header h1 a:hover { color: #fcfcfc; text-decoration: underline; }
 body > header h1 img { display: inline-block; vertical-align: middle; text-decoration: none; }
-body > header nav ul { *zoom: 1; }
+body > header nav ul { list-style: none; padding: 0; *zoom: 1; }
 body > header nav ul:after { content: ""; display: table; clear: both; }
 body > header nav ul li { float: left; text-transform: uppercase; }
 body > header nav ul li a { padding: 10px; padding: 1rem; height: 59px; height: 5.9rem; line-height: 2.4375; color: #fcfcfc; text-decoration: none; display: inline-block; vertical-align: middle; }
