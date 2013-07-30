@@ -177,6 +177,9 @@ form {
 	background: $text-background;
 	cursor: pointer;
 	@include border-radius(1em);
+	text-decoration: none;
+	padding: 0.1em 0.5em;
+	font-weight: bold;
 	
 	&:hover {
 		background: tint($text-background, 20%);
