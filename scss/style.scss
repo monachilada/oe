@@ -97,6 +97,10 @@ body {
 	> section {	
 		padding: 3em 0;
 		min-height: 10em;
+		
+		&.page-hero {
+			padding-bottom: 0;
+		}
 				
 		&.blog, &:first-child:last-child {
 			min-height: 100%;

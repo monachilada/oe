@@ -3,7 +3,7 @@
 	<? $template = get_template_name(get_the_ID()); ?>
 	<? if($template == 'default') $template = 'page'; ?>
 	<?php get_template_part('parts/background'); ?>	
-	<section id="<?= $post->post_name ?>" class="<? the_field('color_scheme') ?>">
+	<section id="<?= $post->post_name ?>" class="<?= $template ?> <? the_field('color_scheme') ?>">
 		<?php get_template_part('parts/loop', $template); ?>
 	</section>
 	<?php if($post->post_parent === 0): ?>
