@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col span12 push6">
 			<?php if(has_post_thumbnail()): ?>
-				<?php the_post_thumbnail('large'); ?>
+				<?php the_post_thumbnail('large', array('class' => 'feature')); ?>
 			<?php endif; ?>
 			<?php if(!get_field('hide_title')): ?>
 				<h2 class="text-center"><?php the_title(); ?></h2>

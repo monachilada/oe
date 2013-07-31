@@ -99,10 +99,14 @@ body {
 		min-height: 10em;
 		
 		&.page-hero {
-			padding-bottom: 0;
+			//padding-bottom: 0;
 			
 			h1 {
 				padding-right: 50%;
+			}
+			
+			.feature {
+				margin-bottom: -2.1em;
 			}
 		}
 				
@@ -112,6 +116,10 @@ body {
 		
 		&:target {
 			padding-top: 89px !important;
+		}
+		
+		.feature {
+			margin-bottom: 1em;
 		}
 	}
 }
@@ -281,9 +289,9 @@ form {
 				padding: 5px;
 				padding: 0.5rem;
 				text-decoration: none;
-				@include hide-text;
+				@include hide-text();
 				
-				&:before {
+				&:after {
 					content: "●";
 					text-indent: 0;
 					display: block;

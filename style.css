@@ -154,10 +154,11 @@ body > header nav ul li { float: left; text-transform: uppercase; }
 body > header nav ul li a { padding: 10px; padding: 1rem; height: 59px; height: 5.9rem; line-height: 2.4375; color: #fcfcfc; text-decoration: none; display: inline-block; vertical-align: middle; }
 body > header nav ul li a:hover { text-decoration: underline; color: #fcfcfc; }
 body > section { padding: 3em 0; min-height: 10em; }
-body > section.page-hero { padding-bottom: 0; }
 body > section.page-hero h1 { padding-right: 50%; }
+body > section.page-hero .feature { margin-bottom: -2.1em; }
 body > section.blog, body > section:first-child:last-child { min-height: 100%; }
 body > section:target { padding-top: 89px !important; }
+body > section .feature { margin-bottom: 1em; }
 
 img { display: block; }
 
@@ -208,4 +209,4 @@ form input[type="text"], form input[type="tel"], form input[type="email"] { widt
 .carousels-nav ul { text-align: center; }
 .carousels-nav ul li { display: inline-block; }
 .carousels-nav ul li a { display: inline-block; font-size: 25px; font-size: 2.5rem; padding: 5px; padding: 0.5rem; text-decoration: none; text-indent: -119988px; overflow: hidden; text-align: left; }
-.carousels-nav ul li a:before { content: "●"; text-indent: 0; display: block; }
+.carousels-nav ul li a:after { content: "●"; text-indent: 0; display: block; }
