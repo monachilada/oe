@@ -57,7 +57,7 @@ body {
 			}
 			
 			img {
-				display: inline-block;				
+				display: inline-block;
 				vertical-align: middle;
 				text-decoration: none;
 			}
@@ -100,6 +100,10 @@ body {
 		
 		&.page-hero {
 			padding-bottom: 0;
+			
+			h1 {
+				padding-right: 50%;
+			}
 		}
 				
 		&.blog, &:first-child:last-child {

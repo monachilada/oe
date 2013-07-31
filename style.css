@@ -153,6 +153,7 @@ body > header nav ul li a { padding: 10px; padding: 1rem; height: 59px; height: 
 body > header nav ul li a:hover { text-decoration: underline; color: #fcfcfc; }
 body > section { padding: 3em 0; min-height: 10em; }
 body > section.page-hero { padding-bottom: 0; }
+body > section.page-hero h1 { padding-right: 50%; }
 body > section.blog, body > section:first-child:last-child { min-height: 100%; }
 body > section:target { padding-top: 89px !important; }
 
