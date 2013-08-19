@@ -9,6 +9,11 @@ jQuery(document).ready(function($) {
 			$url = $url.replace(/\/$/, "");
 			$this.attr('href', $url);
 		}
+	}).on('click', function() {
+		var $this = $(this);
+		
+		$('li', $this.parents('nav')).removeClass('current-menu-item');
+		$this.parents('li').addClass('current-menu-item');
 	});
 	
 	$('body').on('click', 'nav.carousels-nav a', function($e) {

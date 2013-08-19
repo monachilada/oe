@@ -153,8 +153,11 @@ body > header h1 img { display: inline-block; vertical-align: middle; text-decor
 body > header nav ul { list-style: none; padding: 0; *zoom: 1; }
 body > header nav ul:after { content: ""; display: table; clear: both; }
 body > header nav ul li { float: left; text-transform: uppercase; }
+body > header nav ul li.current-menu-item { position: relative; }
+body > header nav ul li.current-menu-item:before { content: " "; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: #3e3846; }
+body > header nav ul li.current-menu-item a { color: #3e3846; }
 body > header nav ul li a { padding: 10px; padding: 1rem; height: 59px; height: 5.9rem; line-height: 2.4375; color: #fcfcfc; text-decoration: none; display: inline-block; vertical-align: middle; }
-body > header nav ul li a:hover { text-decoration: underline; color: #fcfcfc; }
+body > header nav ul li a:hover { color: #3e3846; }
 body > section { padding: 3em 0; min-height: 10em; }
 body > section.page-hero h1 { margin-top: 1.2em; }
 body > section.page-hero .feature { margin-bottom: -2.1em; }

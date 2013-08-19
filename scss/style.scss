@@ -71,7 +71,25 @@ body {
 			
 				li {
 					float: left;
-					text-transform: uppercase;					
+					text-transform: uppercase;
+					
+					&.current-menu-item {
+						position: relative;
+						
+						&:before {
+							content: " ";
+							position: absolute;
+							top: 0;
+							left: 0;
+							right: 0;
+							height: 4px;
+							background: $text-dark;
+						}						
+						
+						a {
+							color: $text-dark;
+						}
+					}
 					
 					a {
 						padding: 10px;
@@ -85,8 +103,7 @@ body {
 						vertical-align: middle;
 						
 						&:hover {
-							text-decoration: underline;
-							color: $text-light;
+							color: $text-dark;
 						}
 					}
 				}
