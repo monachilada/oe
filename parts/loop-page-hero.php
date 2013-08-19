@@ -7,7 +7,7 @@
 				<?php endif; ?>
 			</div>
 		<? endif; ?>
-		<div class="col span12">
+		<div class="col span10 push2">
 			<?php if(!get_field('hide_title')): ?>
 				<h1><?php the_title(); ?></h1>
 			<?php endif; ?>
