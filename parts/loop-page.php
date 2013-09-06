@@ -1,6 +1,6 @@
 <div id="page-<? the_ID() ?>" class="page container">
 	<div class="row">
-		<div class="col span12 push6">
+		<div class="col span14 push5">
 			<?php if(has_post_thumbnail()): ?>
 				<?php the_post_thumbnail('large', array('class' => 'feature')); ?>
 			<?php endif; ?>

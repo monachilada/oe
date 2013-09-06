@@ -18,8 +18,14 @@ Tags: 			ø, single page, typography, stylish, minimal
 @import 'typography';
 @import 'grid';
 
+body.admin-bar {
+	> header {
+		margin-top: 28px;
+	}
+}
+
 body {
-	background: $text-background;
+	background: white;
 	color: $text-dark;
 	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 	font-size: $font-base+px;
@@ -72,6 +78,7 @@ body {
 				li {
 					float: left;
 					text-transform: uppercase;
+					position: relative;
 					
 					&.current-menu-item {
 						position: relative;
@@ -84,9 +91,9 @@ body {
 							right: 0;
 							height: 4px;
 							background: $text-dark;
-						}						
+						}
 						
-						a {
+						> a {
 							color: $text-dark;
 						}
 					}
@@ -104,6 +111,33 @@ body {
 						
 						&:hover {
 							color: $text-dark;
+						}
+					}
+					
+					a:hover + ul, ul:hover {
+						display: block;
+					}
+					
+					ul {
+						background: $text-background;
+						display: none;
+						position: absolute;
+						white-space: nowrap;
+						
+						li {
+							float: none;
+							display: block;
+							
+							a {
+								line-height: 1em;
+								display: block;
+								height: auto;
+							}
+							
+							ul {
+								left: 100%;
+								top: 0;
+							}
 						}
 					}
 				}
